@@ -53,7 +53,8 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 ### Fömenü
 
-EvVegiZaroProjekt\Draw.io_drotvazak\Temavalaszto.png
+<img width="662" height="462" alt="Fomenu" src="https://github.com/user-attachments/assets/1a005ff9-28ee-44e4-819d-bfaa68bfc26b" />
+
 
 
 
