@@ -1,0 +1,61 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto 50px;
+    grid-template-areas: 
+    "h"
+    "m"
+    "f";
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    grid-area: h;
+    background-image: url(Logok/QuizCards.png);
+    background-color: #0D131B;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+main{
+    grid-area: m;
+    background-color: #1f2937;
+    display: grid;
+    place-items: center;
+}
+section{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "tk k";
+}
+
+article{
+    display: grid;
+    place-items: center;
+}
+
+#tanulo_kartya{
+    grid-area: tk;
+}
+
+.fomenu_kepek{
+    height: 600px;
+}
+
+#kviz{
+    grid-area: k;
+}
+
+footer{
+    grid-area: f;
+    background-color: #0D131B;
+    text-align: center;
+    color: white;
+}
