@@ -25,7 +25,6 @@ main{
     grid-area: m;
     background-color: #1f2937;
     display: grid;
-    place-items: center;
 }
 section{
     width: 70%;
@@ -34,11 +33,20 @@ section{
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "tk k";
+    place-items: center;
 }
 
 article{
     display: grid;
     place-items: center;
+       
+    width: 320px;
+    height: 500px;
+
+    background: #111827;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 
 #tanulo_kartya{
@@ -46,7 +54,35 @@ article{
 }
 
 .fomenu_kepek{
-    height: 600px;
+    width: 100%;
+    height: 100%;      
+    object-fit: cover;
+
+}
+
+.kartya_szoveg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 90%; 
+}
+
+.kartya_szoveg h1 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.kartya_szoveg p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    word-wrap: break-word;
 }
 
 #kviz{

@@ -5,4 +5,36 @@ export function kepMegjelenites(){
     tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/tanulokartyak.png" alt="tanulokartyak">`;
 
     kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
+
+    
+    tanulo_kartyaElem.addEventListener("mouseenter", () => {
+        tanulo_kartyaElem.innerHTML = `<div class="kartya_szoveg">
+        <h1>Tanulókártyák</h1>
+        <p>Tanulj gyorsan és rendszerezetten!<br>
+        Interaktív kártyák segítenek
+        az alapfogalmak és a haladó témák elsajátításában.
+        Gyakorolj PHP, JavaScript és Java nyelveken,
+        és építs stabil programozói tudást!</p>
+        </div>`;
+    });
+
+        tanulo_kartyaElem.addEventListener("mouseleave", () => {
+        tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+    });
+
+        kvizElem.addEventListener("mouseenter", () => {
+        kvizElem.innerHTML = `<div class="kartya_szoveg">
+        <h1>Kvíz</h1>
+        <p>Teszteld a tudásod kérdéseken keresztül!<br>
+        Válassz a lehetőségek közül,
+        és találd meg a helyes választ.
+        A rendszer színnel jelzi,
+        hogy jó vagy hibás választ adtál.
+        </div>`;
+    });
+
+        kvizElem.addEventListener("mouseleave", () => {
+        kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
+    });
+
 }
