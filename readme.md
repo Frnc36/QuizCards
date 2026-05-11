@@ -1,4 +1,4 @@
-# Quizcards
+# Quizcards - Molnár Beatrix, Mágori Ferenc
 
 ---
 
@@ -49,7 +49,7 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 - Kártyák tnaulandó lista
 
-## Drótvázak 
+## Drótvázak
 
 ### Főmenü
 
@@ -66,5 +66,18 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 ### Kvíz
 
 ![Kvíz drótváza](Draw.io_drotvazak/Kviz.png)
+
+## UML ábra
+
+![UML ábra](UML/UML_abra.png)
+
+## Feladat kisztás
+
+| Bea          | Feri         |
+| ------------ | ------------ |
+| Tanulókártya | Kvíz         |
+| Főmenü       | Témaválasztó |
+
+## Tesztelés(folyt.köv.)
 
 - Cypress tesztek a fő felhasználói folyamatokra
