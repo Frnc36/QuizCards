@@ -41,13 +41,13 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 - Sötét mód
 
-#### Kvíz
+### Kvíz
 
 - Időzítő
 
-#### Tanulókártya
+### Tanulókártya
 
-- Kártyák tnaulandó lista
+- Kártyák tanulandó lista
 
 ## Drótvázak
 
@@ -71,13 +71,13 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 ![UML ábra](UML/UML_abra.png)
 
-## Feladat kisztás
+## Feladat kiszotás
 
 | Bea          | Feri         |
 | ------------ | ------------ |
 | Tanulókártya | Kvíz         |
 | Főmenü       | Témaválasztó |
 
-## Tesztelés(folyt.köv.)
+## Tesztelés(majd)
 
 - Cypress tesztek a fő felhasználói folyamatokra
