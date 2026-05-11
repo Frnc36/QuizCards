@@ -57,7 +57,7 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 ### Témaválasztó
 
-![Főmenü utáni oldal](Draw.io_drotvazak/Temavalasztod.png)
+![Főmenü utáni oldal](Draw.io_drotvazak/Temavalaszto.png)
 
 ### Tanulókártya
 
