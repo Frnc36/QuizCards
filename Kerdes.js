@@ -9,6 +9,7 @@ export default class Kerdes {
     this.#valaszokLetrehozasa(valaszAdatok);
   }
 
+  /* Getter */
   getKerdesSzoveg() {
     return this.#kerdesSzoveg;
   }
@@ -17,6 +18,7 @@ export default class Kerdes {
     return this.#valaszok;
   }
 
+  /* Saját */ 
   helyesValaszE(valasz) {
     return valasz.helyesE();
   }

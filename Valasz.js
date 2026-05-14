@@ -1,4 +1,5 @@
 export default class Valasz {
+  /* Adattagok */
   #szoveg;
   #helyes;
 
@@ -6,12 +7,12 @@ export default class Valasz {
     this.#szoveg = szoveg;
     this.#helyes = helyes;
   }
-
+  /* Getterek */
   getSzoveg() {
     return this.#szoveg;
   }
 
-  helyesE() {
+  ishelyesE() {
     return this.#helyes;
   }
 }

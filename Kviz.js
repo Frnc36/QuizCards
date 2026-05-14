@@ -19,6 +19,7 @@ export default class Kviz {
     });
   }
 
+  /* Getter */
   getPontszam() {
     return this.#pontszam;
   }
@@ -30,11 +31,7 @@ export default class Kviz {
     return this.#kerdesek[this.#aktualisIndex];
   }
 
-  ujraindit() {
-    this.#aktualisIndex = 0;
-    this.#pontszam = 0;
-  }
-
+  /* Saját */
   valaszEllenorzese(valasz) {
     const aktualisKerdes = this.getAktualisKerdes();
     const helyes = aktualisKerdes.helyesValaszE(valasz);
@@ -56,6 +53,11 @@ export default class Kviz {
     }
 
     return false;
+  }
+
+  ujraindit() {
+    this.#aktualisIndex = 0;
+    this.#pontszam = 0;
   }
 
   eredmenySzoveg() {
