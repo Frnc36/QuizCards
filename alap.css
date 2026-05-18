@@ -21,6 +21,8 @@ header {
     background-size: contain;
 }
 
+
+
 main {
     grid-area: m;
     background-color: #1f2937;

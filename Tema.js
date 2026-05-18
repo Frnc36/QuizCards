@@ -22,8 +22,7 @@ export default class Tema {
       elem.innerHTML = `
           <a href="${this.getNev()}.html">
               <div class="kartya_szoveg">
-                  <h1>${this.getNev()}</h1>
-                  <p>Kattints a ${this.getNev()} kvízhez</p>
+                  <h1>Kattints a ${this.getNev()} kvízhez</h1>
               </div>
           </a>
       `;
