@@ -1,6 +1,5 @@
 import { kepMegjelenites } from "./fomenu.js";
 
-import { megjelenit } from "./kvisTema.js";
 import Tema from "./Tema.js";
 import { kvizAdatok } from "./kerdesAdatok.js";
 
@@ -11,9 +10,10 @@ if (document.querySelector("#tanulo_kartya")) {
 
 
 //téma választóhoz
+
 if (document.getElementById("php")) {
 
-    const temak = kvizAdatok.map(adat => 
+    const temak = kvizAdatok.map(adat =>
         new Tema(adat.nev, adat.kerdesek)
     );
 
@@ -25,7 +25,8 @@ if (document.getElementById("php")) {
     const jsTema = temak.find(t => t.getNev() === "JavaScript");
     const javaTema = temak.find(t => t.getNev() === "Java");
 
-    megjelenit(phpElem, phpTema);
-    megjelenit(jsElem, jsTema);
-    megjelenit(javaElem, javaTema);
+    phpTema?.megjelenit(phpElem);
+    jsTema?.megjelenit(jsElem);
+    javaTema?.megjelenit(javaElem);
 }
+
