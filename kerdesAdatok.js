@@ -1,4 +1,4 @@
-const kvizAdatok = [
+export const kvizAdatok = [
   {
     nev: "JavaScript",
     kerdesek: [

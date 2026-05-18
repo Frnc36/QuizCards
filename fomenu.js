@@ -24,7 +24,7 @@ export function kepMegjelenites(){
 
     //kvíz
     kvizElem.addEventListener("mouseenter", () => {
-        kvizElem.innerHTML = `<a href="kvizKategoria.html">
+        kvizElem.innerHTML = `<a href="kvizTema.html">
         <div class="kartya_szoveg">
         <h1>Kvíz</h1>
         <p>Teszteld a tudásod kérdéseken keresztül!<br>

@@ -1,0 +1,43 @@
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto 50px;
+    grid-template-areas: 
+        "h"
+        "m"
+        "f";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    grid-area: h;
+    background-color: #0D131B;
+    background-image: url(Logok/QuizCards.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+main {
+    grid-area: m;
+    background-color: #1f2937;
+    display: grid;
+}
+
+footer {
+    grid-area: f;
+    background-color: #0D131B;
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+}
