@@ -6,7 +6,7 @@ export function kepMegjelenites(){
 
     kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
 
-    
+    //tanulókártya
     tanulo_kartyaElem.addEventListener("mouseenter", () => {
         tanulo_kartyaElem.innerHTML = `<div class="kartya_szoveg">
         <h1>Tanulókártyák</h1>
@@ -18,22 +18,24 @@ export function kepMegjelenites(){
         </div>`;
     });
 
-        tanulo_kartyaElem.addEventListener("mouseleave", () => {
+    tanulo_kartyaElem.addEventListener("mouseleave", () => {
         tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/tanulokartyak.png" alt="tanulokartyak">`;
     });
 
-        kvizElem.addEventListener("mouseenter", () => {
-        kvizElem.innerHTML = `<div class="kartya_szoveg">
+    //kvíz
+    kvizElem.addEventListener("mouseenter", () => {
+        kvizElem.innerHTML = `<a href="kvizKategoria.html">
+        <div class="kartya_szoveg">
         <h1>Kvíz</h1>
         <p>Teszteld a tudásod kérdéseken keresztül!<br>
         Válassz a lehetőségek közül,
         és találd meg a helyes választ.
         A rendszer színnel jelzi,
         hogy jó vagy hibás választ adtál.
-        </div>`;
+        </div></a>`;
     });
 
-        kvizElem.addEventListener("mouseleave", () => {
+    kvizElem.addEventListener("mouseleave", () => {
         kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
     });
 
