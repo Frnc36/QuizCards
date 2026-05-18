@@ -63,3 +63,27 @@ article{
     margin: 0;
     word-wrap: break-word;
 }
+
+/*reszponzivitás*/
+@media (max-width: 1200px) {
+    section {
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "php js"
+                "java java";
+            gap: 20px;
+        }
+    }
+
+@media (max-width: 800px) {
+    section {
+            width: 90%;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "php"
+                "js"
+                "java";
+            gap: 20px;
+        }
+    }
