@@ -1,12 +1,13 @@
 export default class Kerdes {
   #kerdesSzoveg;
-  #valaszok;
+  #valaszok = [];
 
-  constructor(kerdesSzoveg, valaszAdatok) {
+  constructor(kerdesSzoveg, valaszAdatok, szuloElem) {
     this.#kerdesSzoveg = kerdesSzoveg;
-    this.#valaszok = [];
+    this.#valaszok = valaszAdatok;
+    this.szuloElem = szuloElem;
 
-    this.#valaszokLetrehozasa(valaszAdatok);
+    this.megjelenit();
   }
 
   /* Getter */
@@ -18,15 +19,18 @@ export default class Kerdes {
     return this.#valaszok;
   }
 
-  /* Saját */ 
-  helyesValaszE(valasz) {
-    return valasz.helyesE();
+  megjelenit() {
+    let kod = `<h2>${this.#kerdesSzoveg}</h2>`;
+    /* Ezt kiegészíteném a válaszok számára egy divvel */
+    this.szuloElem.insertAdjacentHTML("beforeend", kod);
+    /* megfognám a valasz div-et 
+    /*  végigmegyek a listán és 
+    példűányosítanám a kerdes osztáűlyt a lista elemeive
+    a szülőelem a z utolsó valasz div. */
   }
 
-  #valaszokLetrehozasa(valaszAdatok) {
-    valaszAdatok.forEach((valaszAdat) => {
-      const valasz = new Valasz(valaszAdat.szoveg, valaszAdat.helyes);
-      this.#valaszok.push(valasz);
-    });
+  /* Saját */
+  helyesValaszE(valasz) {
+    return valasz.helyesE();
   }
 }

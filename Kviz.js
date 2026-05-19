@@ -1,21 +1,24 @@
+import Kerdes from "./Kerdes.js";
+
 export default class Kviz {
-  #kerdesek;
+  #kerdesek = [];
   #aktualisIndex;
   #pontszam;
 
-  constructor(kerdesAdatok) {
-    this.#kerdesek = [];
+  constructor(kerdesAdatok = [], szuloElem) {
+    this.#kerdesek = kerdesAdatok;
     this.#aktualisIndex = 0;
     this.#pontszam = 0;
-
-    this.#kerdesekLetrehozasa(kerdesAdatok);
+    this.szuloElem = szuloElem;
+    this.#kerdesekLetrehozasa();
   }
 
-  #kerdesekLetrehozasa(kerdesAdatok) {
-    kerdesAdatok.forEach((kerdesAdat) => {
-      const kerdes = new Kerdes(kerdesAdat.kerdesSzoveg, kerdesAdat.valaszok);
-
-      this.#kerdesek.push(kerdes);
+  #kerdesekLetrehozasa() {
+    console.log("kvíz");
+    this.#kerdesek.forEach((egyKerdes) => {
+      console.log(egyKerdes)
+      console.log(egyKerdes.kerdesSzoveg)
+      const kerdes = new Kerdes(egyKerdes.kerdesSzoveg, egyKerdes.valaszok, this.szuloElem);
     });
   }
 
