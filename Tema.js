@@ -20,7 +20,7 @@ export default class Tema {
       if (!elem) return;
 
       elem.innerHTML = `
-          <a href="${this.getNev()}.html">
+          <a href="kviz.html">
               <div class="kartya_szoveg">
                   <h1>Kattints a ${this.getNev()} kvízhez</h1>
               </div>

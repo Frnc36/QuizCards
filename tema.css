@@ -3,6 +3,7 @@ section{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "php js java";
     place-items: center;
 }
 
@@ -79,14 +80,17 @@ article:hover .kartya_szoveg {
 }
 
 #php {
+    grid-area: php;
     background-image: url("Kepek/php.png");
 }
 
 #js {
+    grid-area: js;
     background-image: url("Kepek/js.png");
 }
 
 #java {
+    grid-area: java;
     background-image: url("Kepek/java.png");
 }
 
