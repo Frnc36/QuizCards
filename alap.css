@@ -14,8 +14,7 @@ body {
 
 header {
     grid-area: h;
-    background-color: #0D131B;
-    background-image: url(Logok/QuizCards.png);
+    background-color: #7DAACB;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -25,15 +24,15 @@ header {
 
 main {
     grid-area: m;
-    background-color: #1f2937;
+    background-color: #DEC384;
     display: grid;
 }
 
 footer {
     grid-area: f;
-    background-color: #0D131B;
+    background-color: #7DAACB;
     text-align: center;
-    color: white;
+    color: #E8DDB4;
 }
 
 a {
