@@ -10,20 +10,19 @@ export default class Kviz {
     this.#aktualisIndex = 0;
     this.#pontszam = 0;
     this.szuloElem = szuloElem;
-    this.#kever(this.#kerdesek)
+    this.#kever(this.#kerdesek);
 
     this.#ujKerdes();
   }
 
-  
   #kever(tomb) {
-      for (let i = tomb.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [tomb[i], tomb[j]] = [tomb[j], tomb[i]];
-      }
+    for (let i = tomb.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [tomb[i], tomb[j]] = [tomb[j], tomb[i]];
     }
+  }
 
-
+  
   #ujKerdes() {
     if (this.vegeVanE()) {
       this.szuloElem.innerHTML = `
