@@ -11,33 +11,27 @@ export default class Kviz {
     this.#pontszam = 0;
     this.szuloElem = szuloElem;
 
-    this.aktualisKerdesObj = null;
-
-    this.#kerdesekLetrehozasa();
+    this.#ujKerdes();
   }
 
-  #kerdesekLetrehozasa() {
-    this.szuloElem.innerHTML = "";
+  #ujKerdes() {
+    if (this.vegeVanE()) {
+      this.szuloElem.innerHTML = `
+        <h2>Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}</h2>
+      `;
+      return;
+    }
 
-    console.log("kvíz");
+    this.szuloElem.innerHTML="";
 
-    /*this.#kerdesek.forEach((egyKerdes) => {
-      console.log(egyKerdes)
-      console.log(egyKerdes.kerdesSzoveg)
-      const kerdes = new Kerdes(egyKerdes.kerdesSzoveg, egyKerdes.valaszok, this.szuloElem);
-    });*/
-
-    const adat = this.getAktualisKerdes();
-    
+    const adat = this.#kerdesek[this.#aktualisIndex];
     this.aktualisKerdesObj = new Kerdes(
-          adat.kerdesSzoveg,
-          adat.valaszok,
-          this.szuloElem,
-          this
-        );
+      adat.kerdesSzoveg,
+      adat.valaszok,
+      this.szuloElem,
+      this,
+    );
   }
-
-  
 
   /* Getter */
   getPontszam() {
@@ -62,27 +56,15 @@ export default class Kviz {
     return helyes;
   }
 
-  kovetkezoKerdes() {
+  valaszKattintva(valasz) {
+    if (this.aktualisKerdesObj.helyesValaszE(valasz)) {
+      this.#pontszam++;
+    }
     this.#aktualisIndex++;
-
-    if (!this.vegeVanE()) {
-          this.#kerdesekLetrehozasa();
-        } else {
-          this.szuloElem.innerHTML = `<h2>${this.eredmenySzoveg()}</h2>`;
-        }
+    this.#ujKerdes();
   }
 
   vegeVanE() {
     return this.#aktualisIndex >= this.#kerdesek.length;
-  }
-
-  ujraindit() {
-    this.#aktualisIndex = 0;
-    this.#pontszam = 0;
-    this.#kerdesekLetrehozasa();
-  }
-
-  eredmenySzoveg() {
-    return `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
   }
 }
