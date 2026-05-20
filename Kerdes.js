@@ -9,6 +9,7 @@ export default class Kerdes {
     this.#valaszok = valaszAdatok;
     this.szuloElem = szuloElem;
     this.kviz = kviz;
+    this.#kever(this.#valaszok);
 
     this.megjelenit();
   }
@@ -43,8 +44,14 @@ export default class Kerdes {
         this.kviz.valaszKattintva(valaszObj),
       );
       valasz.megjelenit(valaszElem);
-      
     });
+  }
+
+  #kever(tomb) {
+    for (let i = tomb.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [tomb[i], tomb[j]] = [tomb[j], tomb[i]];
+    }
   }
 
   /* Saját */
