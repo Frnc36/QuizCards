@@ -7,7 +7,6 @@ export default class Valasz {
     this.#szoveg = szoveg;
     this.#helyes = helyes;
     this.onClick = onClick;
-    
   }
 
   /* Getterek */
@@ -22,7 +21,6 @@ export default class Valasz {
   megjelenit(szuloElem) {
     const p = document.createElement("p");
     p.textContent = this.#szoveg;
-    
 
     p.addEventListener("click", () => {
       this.onClick(this);
