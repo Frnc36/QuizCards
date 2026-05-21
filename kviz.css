@@ -69,8 +69,8 @@ main {
     box-shadow 0.2s;
   letter-spacing: 0.3px;
   border: 1px solid rgba(59, 130, 246, 0.3);
-  user-select: none;
-}
+/*   user-select: none;
+ */}
 
 /* Első válasz */
 .valaszok p:first-child {
@@ -89,7 +89,7 @@ main {
 
 /* Negyedik válasz (utolsó) */
 .valaszok p:last-child {
-  border: 3px solid orange;
+  border: 3px solid yellow;
 }
 
 /* Border pulzáló hatás */
@@ -120,8 +120,8 @@ main {
 }
 
 .valaszok p:last-child:hover {
-  border-color: #ffaa44;
-  box-shadow: 0 0 15px rgba(255, 170, 68, 0.5);
+  border-color: #fff344;
+  box-shadow: 0 0 15px rgba(255, 227, 68, 0.5);
 }
 
 .melyik{
