@@ -41,7 +41,7 @@ export default class Kviz {
 
     const info = document.createElement("p");
     info.classList.add("melyik");
-    info.textContent = `${this.#aktualisIndex + 1} / ${this.#kerdesek.length} kérdés`;
+    info.textContent = `⚡ ${this.#aktualisIndex + 1} / ${this.#kerdesek.length} kérdés ⚡`;
     this.szuloElem.appendChild(info);
 
     const adat = this.#kerdesek[this.#aktualisIndex];
