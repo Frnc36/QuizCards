@@ -22,9 +22,14 @@ main {
   padding: 2rem 2rem 2.5rem;
   transition: transform 0.2s;
   color: white;
+  
+    
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e9efd725955f2319fee4a513c0836fdb50fec78
 .kerdes {
   background: #0f172a;
   padding: 1rem 1.5rem;
@@ -70,6 +75,7 @@ main {
     box-shadow 0.2s;
   letter-spacing: 0.3px;
   border: 1px solid rgba(59, 130, 246, 0.3);
+  user-select: none;
 }
 
 /* Első válasz */
@@ -156,4 +162,23 @@ main {
 
 .reset-gomb:active {
   transform: scale(0.98);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+/* 📱 Mobil nézet */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+  .valaszok {
+    grid-template-columns: 1fr;
+  }
+
+  .kerdes h2 {
+    font-size: 1.5rem;
+  }
 }
