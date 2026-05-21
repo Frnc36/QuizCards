@@ -26,10 +26,6 @@ main {
     
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e9efd725955f2319fee4a513c0836fdb50fec78
 .kerdes {
   background: #0f172a;
   padding: 1rem 1.5rem;
@@ -164,10 +160,7 @@ main {
   transform: scale(0.98);
 }
 
-footer {
-  margin-top: 2rem;
-  padding: 1rem 0;
-}
+
 
 /* 📱 Mobil nézet */
 @media (max-width: 600px) {
