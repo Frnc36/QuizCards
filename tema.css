@@ -9,20 +9,20 @@ section{
 
 nav{
     width: 100%;
-    background: #DAA464;
+    background: rgba(18, 25, 45, 0.85);
     height: 60px;
+    margin-bottom: 20px;
 
     
     display: flex; 
     justify-content: center;
     align-items: center; 
-
 }
 
 .home-link {
     font-size: 36px;
     text-decoration: none;
-    color: #E8DDB4;
+    color: white;
 
     display: flex;
     align-items: center;
@@ -42,9 +42,12 @@ article{
     width: 320px;
     height: 500px;
 
-    background: #E8DDB4;
+    background: rgba(18, 25, 45, 0.85);
+    
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow:
+    0 25px 45px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 2px rgba(66, 153, 225, 0.2);
     overflow: hidden;
     
     cursor: pointer;
@@ -62,12 +65,17 @@ article:hover .kartya_szoveg {
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #DAA464;
+    color: white;
     text-align: center;
     padding: 15px;
     background: rgba(0, 0, 0, 0.7);
 
-    
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    box-shadow:
+    0 25px 45px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(66, 153, 225, 0.2);
+
     opacity: 0;
     transition: all 0.3s ease;
     transform: translateY(20px);

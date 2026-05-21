@@ -5,20 +5,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-body {
-  background: linear-gradient(145deg, #0b1120 0%, #111827 100%);
-  font-family:
-    "Segoe UI",
-    "Poppins",
-    "Inter",
-    system-ui,
-    -apple-system,
-    "Roboto",
-    monospace;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-}
+
 main {
   min-height: auto;
   margin: auto auto;
@@ -37,15 +24,7 @@ main {
   color: white;
 }
 
-/* .kviz-tartalom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "k k"
-    "p p"
-    "p p";
-}
- */
+
 .kerdes {
   background: #0f172a;
   padding: 1rem 1.5rem;

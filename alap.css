@@ -1,5 +1,13 @@
 
 body {
+    font-family:
+    "Segoe UI",
+    "Poppins",
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Roboto",
+    monospace;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px auto 50px;
@@ -10,11 +18,13 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #0d2044;
 }
 
 header {
     grid-area: h;
-    background-color: #7DAACB;
+    background-image: url(Logok/QuizCards.png);
+    background-color: #0D121B;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -24,15 +34,18 @@ header {
 
 main {
     grid-area: m;
-    background-color: #DEC384;
     display: grid;
 }
 
 footer {
     grid-area: f;
-    background-color: #7DAACB;
+    background-color: #0D121B;
     text-align: center;
-    color: #E8DDB4;
+    color: white;
+    margin-top: 20px;
+}
+footer p{
+    margin: 10px
 }
 
 a {
