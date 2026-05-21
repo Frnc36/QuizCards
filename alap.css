@@ -1,6 +1,5 @@
-
 body {
-    font-family:
+  font-family:
     "Segoe UI",
     "Poppins",
     "Inter",
@@ -8,50 +7,53 @@ body {
     -apple-system,
     "Roboto",
     monospace;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px auto 50px;
-    grid-template-areas: 
-        "h"
-        "m"
-        "f";
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: #0d2044;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px auto 50px;
+  grid-template-areas:
+    "h"
+    "m"
+    "f";
+  height: 99vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0d2044;
 }
 
 header {
-    grid-area: h;
-    background-image: url(Logok/QuizCards.png);
-    background-color: #0D121B;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  grid-area: h;
+  background-image: url(Logok/QuizCards.png);
+  background-color: #0d121b;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-
-
 main {
-    grid-area: m;
-    display: grid;
+  grid-area: m;
+  display: grid;
 }
 
 footer {
-    grid-area: f;
-    background-color: #0D121B;
-    text-align: center;
-    color: white;
-    margin-top: 20px;
+  grid-area: f;
+  text-align: center;
+  color: white;
+  height: 70px;
+  padding: 20px;
+  width: fit-content;
+  margin: 5px auto;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 1.8rem;
+  background-color: rgba(18, 25, 45, 0.85);
 }
-footer p{
-    margin: 10px
+footer p {
+  margin: 5px;
 }
 
 a {
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: inherit;
 }
