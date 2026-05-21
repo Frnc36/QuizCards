@@ -124,6 +124,10 @@ main {
   box-shadow: 0 0 15px rgba(255, 170, 68, 0.5);
 }
 
+.melyik{
+  padding-left: 100px;
+}
+
 /* Reset gomb */
 .reset-gomb {
   background: linear-gradient(95deg, #3b82f6, #2563eb);
