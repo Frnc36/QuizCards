@@ -39,7 +39,7 @@ export default class Kviz {
       return;
     }
 
-    const info = document.createElement("p");
+    const info = document.createElement("p.melyik");
     info.textContent = `${this.#aktualisIndex + 1} / ${this.#kerdesek.length} kérdés`;
     this.szuloElem.appendChild(info);
 
