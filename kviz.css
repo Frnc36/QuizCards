@@ -125,7 +125,8 @@ main {
 }
 
 .melyik{
-  padding-left: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Reset gomb */
