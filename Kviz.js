@@ -22,16 +22,26 @@ export default class Kviz {
     }
   }
 
-  
   #ujKerdes() {
+    this.szuloElem.innerHTML = "";
+
     if (this.vegeVanE()) {
-      this.szuloElem.innerHTML = `
-        <h2>Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}</h2>
-      `;
+      const eredmeny = document.createElement("h3");
+      eredmeny.textContent = `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
+      this.szuloElem.appendChild(eredmeny);
+
+      const resetGomb = document.createElement("button");
+      resetGomb.textContent = "Újraindítás";
+      resetGomb.classList.add("reset-gomb");
+      resetGomb.addEventListener("click", () => this.reset());
+      this.szuloElem.appendChild(resetGomb);
+
       return;
     }
 
-    this.szuloElem.innerHTML="";
+    const info = document.createElement("p");
+    info.textContent = `${this.#aktualisIndex + 1} / ${this.#kerdesek.length} kérdés`;
+    this.szuloElem.appendChild(info);
 
     const adat = this.#kerdesek[this.#aktualisIndex];
     this.aktualisKerdesObj = new Kerdes(
@@ -40,6 +50,19 @@ export default class Kviz {
       this.szuloElem,
       this,
     );
+
+    const resetGomb = document.createElement("button");
+    resetGomb.textContent = "Újraindítás";
+    resetGomb.classList.add("reset-gomb");
+    resetGomb.addEventListener("click", () => this.reset());
+    this.szuloElem.appendChild(resetGomb);
+  }
+
+  reset() {
+    this.#aktualisIndex = 0;
+    this.#pontszam = 0;
+    this.#kever(this.#kerdesek);
+    this.#ujKerdes();
   }
 
   /* Getter */

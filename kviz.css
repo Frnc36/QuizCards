@@ -1,12 +1,40 @@
-body {
-  background-color: #e8ddb4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
+body {
+  background: linear-gradient(145deg, #0b1120 0%, #111827 100%);
+  font-family:
+    "Segoe UI",
+    "Poppins",
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Roboto",
+    monospace;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
 main {
+  min-height: auto;
   margin: auto auto;
-  width: 50%;
-  background-color: white;
-  padding: 12px;
+  width: 50;
+  max-width: 780px;
+  width: 100%;
+  background: rgba(18, 25, 45, 0.85);
+  backdrop-filter: blur(2px);
+  border-radius: 3rem;
+  box-shadow:
+    0 25px 45px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(66, 153, 225, 0.2);
+  overflow: hidden;
+  padding: 2rem 2rem 2.5rem;
+  transition: transform 0.2s;
+  color: white;
 }
 
 /* .kviz-tartalom {
@@ -19,28 +47,50 @@ main {
 }
  */
 .kerdes {
+  background: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  margin: 1rem 0 1.8rem 0;
   text-align: center;
-  border: 3px solid black;
-  border-radius: 5px;
-  padding: 1%;
-  margin-bottom: 10px;
+  border-left: 5px solid #3b82f6;
+  border-right: 5px solid #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
+.kerdes h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  font-family: "Fira Code", "Cascadia Code", monospace;
+  word-break: break-word;
 }
 
 .valaszok {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "p p"
-    "p p";
-  text-align: center;
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin: 2rem 0 2rem 0;
 }
 
 .valaszok p {
-  padding: 5%;
-  margin: 0px;
-  border-radius: 5px;
+  background: #1e293b;
+  border: none;
+  padding: 1rem 0.8rem;
+  border-radius: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Segoe UI", system-ui;
+  color: #e2e8f0;
+  cursor: pointer;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.15s,
+    background 0.2s,
+    box-shadow 0.2s;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 /* Első válasz */
@@ -63,30 +113,16 @@ main {
   border: 3px solid orange;
 }
 
-/* Hover effektek */
-
-/* Nagyítós (akér a kérdésre is lehet) */
-/* .valaszok p {
+/* Border pulzáló hatás */
+.valaszok p {
   transition: all 0.3s ease;
 }
 
 .valaszok p:hover {
   transform: scale(1.02);
-  filter: brightness(0.95);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
- */
-
-
-
- /* Border pulzáló hatás */
-/* .valaszok p {
-  transition: all 0.3s ease;
-}
-
-.valaszok p:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1), 0 0 0 6px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 0 3px rgba(0, 0, 0, 0.1),
+    0 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
 .valaszok p:first-child:hover {
@@ -94,12 +130,10 @@ main {
   box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
 }
 
-
 .valaszok p:nth-child(2):hover {
   border-color: #4488ff;
   box-shadow: 0 0 15px rgba(68, 136, 255, 0.5);
 }
-
 
 .valaszok p:nth-child(3):hover {
   border-color: #44ff44;
@@ -109,112 +143,38 @@ main {
 .valaszok p:last-child:hover {
   border-color: #ffaa44;
   box-shadow: 0 0 15px rgba(255, 170, 68, 0.5);
-} */
+}
 
-
-
-
-/* Glow effekt (ragyogás) */
-/*.valaszok p {
-  transition: all 0.3s ease;
+/* Reset gomb */
+.reset-gomb {
+  background: linear-gradient(95deg, #3b82f6, #2563eb);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: white;
   cursor: pointer;
-}
-
-.valaszok p:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.valaszok p:first-child:hover {
-  border-color: #ff6666;
-  box-shadow: 0 8px 20px rgba(255,102,102,0.3);
-}
-
-.valaszok p:nth-child(2):hover {
-  border-color: #6699ff;
-  box-shadow: 0 8px 20px rgba(102,153,255,0.3);
-}
-
-.valaszok p:nth-child(3):hover {
-  border-color: #66ff66;
-  box-shadow: 0 8px 20px rgba(102,255,102,0.3);
-}
-
-.valaszok p:last-child:hover {
-  border-color: #ffbb66;
-  box-shadow: 0 8px 20px rgba(255,187,102,0.3);
-} */
-
-
-
-
-/* 3D billenés  */
-/* .valaszok p {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-}
-
-.valaszok p:hover {
-  transform: translateY(-5px) scale(1.01);
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   letter-spacing: 1px;
+  /* box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3); */ /* csillogás */
+  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.valaszok p:first-child:hover {
-  border: 4px solid #ff4444;
-  background: rgba(255,68,68,0.05);
+.reset-gombhover {
+  background: linear-gradient(95deg, #2563eb, #1d4ed8);
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px -8px #1e3a8a;
 }
 
-.valaszok p:nth-child(2):hover {
-  border: 4px solid #4488ff;
-  background: rgba(68,136,255,0.05);
+.reset-gomb:active {
+  transform: scale(0.98);
 }
-
-.valaszok p:nth-child(3):hover {
-  border: 4px solid #44ff44;
-  background: rgba(68,255,68,0.05);
-}
-
-.valaszok p:last-child:hover {
-  border: 4px solid #ffaa44;
-  background: rgba(255,170,68,0.05);
-} */
-
-/* szöveg bold */
-/* .valaszok p {
-  transition: all 0.25s ease-in-out;
-  cursor: pointer;
-}
-
-.valaszok p:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
-  border-width: 4px;
-  font-weight: bold;
-} */
-
-/* Közös tulajdonságok */
-.valaszok p {
-  padding: 5%;
-  margin: 0px;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  cursor: pointer;
-}
-
-/* Border színek */
-.valaszok p:first-child { border: 3px solid red; }
-.valaszok p:nth-child(2) { border: 3px solid blue; }
-.valaszok p:nth-child(3) { border: 3px solid green; }
-.valaszok p:last-child { border: 3px solid orange; }
-
-/* Hover effekt mindegyikre */
-.valaszok p:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-width: 4px;
-}
-
-/* Egyedi hover színek */
-.valaszok p:first-child:hover { border-color: #ff4444; background: rgba(255,68,68,0.05); }
-.valaszok p:nth-child(2):hover { border-color: #4488ff; background: rgba(68,136,255,0.05); }
-.valaszok p:nth-child(3):hover { border-color: #44ff44; background: rgba(68,255,68,0.05); }
-.valaszok p:last-child:hover { border-color: #ffaa44; background: rgba(255,170,68,0.05); }
