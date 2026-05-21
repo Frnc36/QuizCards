@@ -5,6 +5,8 @@ body {
 main {
   margin: auto auto;
   width: 50%;
+  background-color: white;
+  padding: 12px;
 }
 
 /* .kviz-tartalom {
@@ -18,10 +20,11 @@ main {
  */
 .kerdes {
   text-align: center;
-  border: 3px solid #767f9e;
+  border: 3px solid black;
+  border-radius: 5px;
   padding: 1%;
-  gap: 10px;
   margin-bottom: 10px;
+
 }
 
 .valaszok {
@@ -31,10 +34,187 @@ main {
     "p p"
     "p p";
   text-align: center;
+  gap: 10px;
 }
 
 .valaszok p {
-  border: 3px solid #767f9e;
-  padding: 10%;
+  padding: 5%;
   margin: 0px;
+  border-radius: 5px;
 }
+
+/* Első válasz */
+.valaszok p:first-child {
+  border: 3px solid red;
+}
+
+/* Második válasz */
+.valaszok p:nth-child(2) {
+  border: 3px solid blue;
+}
+
+/* Harmadik válasz */
+.valaszok p:nth-child(3) {
+  border: 3px solid green;
+}
+
+/* Negyedik válasz (utolsó) */
+.valaszok p:last-child {
+  border: 3px solid orange;
+}
+
+/* Hover effektek */
+
+/* Nagyítós (akér a kérdésre is lehet) */
+/* .valaszok p {
+  transition: all 0.3s ease;
+}
+
+.valaszok p:hover {
+  transform: scale(1.02);
+  filter: brightness(0.95);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+ */
+
+
+
+ /* Border pulzáló hatás */
+/* .valaszok p {
+  transition: all 0.3s ease;
+}
+
+.valaszok p:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1), 0 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.valaszok p:first-child:hover {
+  border-color: #ff4444;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+
+.valaszok p:nth-child(2):hover {
+  border-color: #4488ff;
+  box-shadow: 0 0 15px rgba(68, 136, 255, 0.5);
+}
+
+
+.valaszok p:nth-child(3):hover {
+  border-color: #44ff44;
+  box-shadow: 0 0 15px rgba(68, 255, 68, 0.5);
+}
+
+.valaszok p:last-child:hover {
+  border-color: #ffaa44;
+  box-shadow: 0 0 15px rgba(255, 170, 68, 0.5);
+} */
+
+
+
+
+/* Glow effekt (ragyogás) */
+/*.valaszok p {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.valaszok p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.valaszok p:first-child:hover {
+  border-color: #ff6666;
+  box-shadow: 0 8px 20px rgba(255,102,102,0.3);
+}
+
+.valaszok p:nth-child(2):hover {
+  border-color: #6699ff;
+  box-shadow: 0 8px 20px rgba(102,153,255,0.3);
+}
+
+.valaszok p:nth-child(3):hover {
+  border-color: #66ff66;
+  box-shadow: 0 8px 20px rgba(102,255,102,0.3);
+}
+
+.valaszok p:last-child:hover {
+  border-color: #ffbb66;
+  box-shadow: 0 8px 20px rgba(255,187,102,0.3);
+} */
+
+
+
+
+/* 3D billenés  */
+/* .valaszok p {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.valaszok p:hover {
+  transform: translateY(-5px) scale(1.01);
+  letter-spacing: 1px;
+}
+
+.valaszok p:first-child:hover {
+  border: 4px solid #ff4444;
+  background: rgba(255,68,68,0.05);
+}
+
+.valaszok p:nth-child(2):hover {
+  border: 4px solid #4488ff;
+  background: rgba(68,136,255,0.05);
+}
+
+.valaszok p:nth-child(3):hover {
+  border: 4px solid #44ff44;
+  background: rgba(68,255,68,0.05);
+}
+
+.valaszok p:last-child:hover {
+  border: 4px solid #ffaa44;
+  background: rgba(255,170,68,0.05);
+} */
+
+/* szöveg bold */
+/* .valaszok p {
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.valaszok p:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+  border-width: 4px;
+  font-weight: bold;
+} */
+
+/* Közös tulajdonságok */
+.valaszok p {
+  padding: 5%;
+  margin: 0px;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  cursor: pointer;
+}
+
+/* Border színek */
+.valaszok p:first-child { border: 3px solid red; }
+.valaszok p:nth-child(2) { border: 3px solid blue; }
+.valaszok p:nth-child(3) { border: 3px solid green; }
+.valaszok p:last-child { border: 3px solid orange; }
+
+/* Hover effekt mindegyikre */
+.valaszok p:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-width: 4px;
+}
+
+/* Egyedi hover színek */
+.valaszok p:first-child:hover { border-color: #ff4444; background: rgba(255,68,68,0.05); }
+.valaszok p:nth-child(2):hover { border-color: #4488ff; background: rgba(68,136,255,0.05); }
+.valaszok p:nth-child(3):hover { border-color: #44ff44; background: rgba(68,255,68,0.05); }
+.valaszok p:last-child:hover { border-color: #ffaa44; background: rgba(255,170,68,0.05); }
