@@ -19,7 +19,7 @@ export function kepMegjelenites(){
     });
 
     tanulo_kartyaElem.addEventListener("mouseleave", () => {
-        tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+        tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
     });
 
     //kvíz
@@ -36,7 +36,7 @@ export function kepMegjelenites(){
     });
 
     kvizElem.addEventListener("mouseleave", () => {
-        kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
+        kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
     });
 
 }
