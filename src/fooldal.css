@@ -31,6 +31,10 @@ article{
     grid-area: tk;
 }
 
+#fejlesztes{
+    color: red;
+}
+
 .fomenu_kepek{
     width: 100%;
     height: 100%;      

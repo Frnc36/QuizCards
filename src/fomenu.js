@@ -15,8 +15,7 @@ export function kepMegjelenites(){
         az alapfogalmak és a haladó témák elsajátításában.
         Gyakorolj PHP, JavaScript és Java nyelveken,
         és építs stabil programozói tudást!</p>
-        </div>
-        <div id="fejlesztes"><p>Fejlesztés alatt!</p></div>`;
+        <div id="fejlesztes"><p>Fejlesztés alatt!</p></div></div>`;
     });
 
     tanulo_kartyaElem.addEventListener("mouseleave", () => {
