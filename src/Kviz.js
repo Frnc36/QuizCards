@@ -1,4 +1,3 @@
-
 import Kerdes from "./Kerdes.js";
 
 export default class Kviz {
@@ -11,8 +10,8 @@ export default class Kviz {
     this.#aktualisIndex = 0;
     this.#pontszam = 0;
     this.szuloElem = szuloElem;
-
     this.#kever(this.#kerdesek);
+
     this.#ujKerdes();
   }
 
@@ -27,13 +26,16 @@ export default class Kviz {
     this.szuloElem.innerHTML = "";
 
     if (this.vegeVanE()) {
-      this.eredmenyKiir();
+      const eredmeny = document.createElement("h3");
+      eredmeny.textContent = `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
+      this.szuloElem.appendChild(eredmeny);
 
       const resetGomb = document.createElement("button");
       resetGomb.textContent = "Újraindítás";
       resetGomb.classList.add("reset-gomb");
       resetGomb.addEventListener("click", () => this.reset());
       this.szuloElem.appendChild(resetGomb);
+
       return;
     }
 
@@ -47,7 +49,7 @@ export default class Kviz {
       adat.kerdesSzoveg,
       adat.valaszok,
       this.szuloElem,
-      this
+      this,
     );
 
     const resetGomb = document.createElement("button");
@@ -64,24 +66,34 @@ export default class Kviz {
     this.#ujKerdes();
   }
 
-  /* ===== PONTSZÁM ===== */
-
-  novelPontszam() {
-    this.#pontszam++;
+  /* Getter */
+  getPontszam() {
+    return this.#pontszam;
   }
 
-  eredmenyKiir() {
-    const eredmeny = document.createElement("h3");
-    eredmeny.textContent = `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
-    this.szuloElem.appendChild(eredmeny);
+  getKerdesekSzama() {
+    return this.#kerdesek.length;
+  }
+  getAktualisKerdes() {
+    return this.#kerdesek[this.#aktualisIndex];
   }
 
-  /* ===== VEZÉRLÉS ===== */
+  /* Saját */
+  valaszEllenorzese(valasz) {
+    const helyes = this.aktualisKerdesObj.helyesValaszE(valasz);
+
+    if (helyes) {
+      this.#pontszam++;
+    }
+
+    return helyes;
+  }
 
   valaszKattintva(valasz) {
-    if (valasz.isHelyesE()) {
-      this.novelPontszam();
+    if (this.aktualisKerdesObj.helyesValaszE(valasz)) {
+      this.#pontszam++;
     }
+    
     
     setTimeout(() => {
       this.#aktualisIndex++;
@@ -89,7 +101,6 @@ export default class Kviz {
     }, 1000);
 
   }
-
   vegeVanE() {
     return this.#aktualisIndex >= this.#kerdesek.length;
   }
