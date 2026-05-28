@@ -26,7 +26,7 @@ if (document.getElementById("php")) {
   phpTema?.megjelenit(phpElem);
   jsTema?.megjelenit(jsElem);
   javaTema?.megjelenit(javaElem);
-  
+
   phpElem.addEventListener("click", () => {
     localStorage.setItem("tema", "PHP");
     window.location.href = "kviz.html";
@@ -68,6 +68,3 @@ if (kovBtn) {
     }
   });
 }
-
-
-
