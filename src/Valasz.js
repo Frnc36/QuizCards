@@ -21,23 +21,25 @@ export default class Valasz {
     const p = document.createElement("p");
     p.textContent = this.#szoveg;
 
-    // fontos a CSS-ed miatt
-    p.classList.add("valasz");
+    
+    p.addEventListener("click", () => { 
+      const osszes = szuloElem.querySelectorAll("p");
+      osszes.forEach(elem => {
+        elem.style.pointerEvents = "none";
+      });
 
-    p.addEventListener("click", () => {
-      // színezés
-      if (this.#helyes) {
+      const helyes = this.ishelyesE();
+      if (helyes) {
         p.classList.add("helyes");
       } else {
-        p.classList.add("helytelen");
+        p.classList.add("rossz");
       }
 
-      // ne lehessen újra kattintani
-      p.style.pointerEvents = "none";
-
-      // jelez a Kvíznek
-      this.onClick(this);
+      setTimeout(() => {
+        this.onClick(this);
+      }, 1000);
     });
+
 
     szuloElem.appendChild(p);
   }

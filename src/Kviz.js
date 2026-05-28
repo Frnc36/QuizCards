@@ -82,9 +82,12 @@ export default class Kviz {
     if (valasz.isHelyesE()) {
       this.novelPontszam();
     }
+    
+    setTimeout(() => {
+      this.#aktualisIndex++;
+      this.#ujKerdes();
+    }, 1000);
 
-    this.#aktualisIndex++;
-    this.#ujKerdes();
   }
 
   vegeVanE() {
