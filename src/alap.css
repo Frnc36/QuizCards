@@ -11,12 +11,12 @@ body {
     monospace;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px auto 50px;
+  grid-template-rows: 200px 75px auto 50px;
   grid-template-areas:
     "h"
+    "n"
     "m"
     "f";
-  height: 99vh;
   margin: 0;
   padding: 0;
   background-color: #0d2044;
@@ -29,6 +29,10 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+nav{
+  grid-area: n;
 }
 
 main {

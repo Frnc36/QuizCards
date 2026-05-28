@@ -2,9 +2,9 @@ export function kepMegjelenites(){
     let tanulo_kartyaElem = document.querySelector("#tanulo_kartya");
     let kvizElem = document.querySelector("#kviz");
 
-    tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+    tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
 
-    kvizElem.innerHTML = `<img class="fomenu_kepek" src="Kepek/kviz.png" alt="kviz">`;
+    kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
 
     //tanulókártya
     tanulo_kartyaElem.addEventListener("mouseenter", () => {
@@ -15,7 +15,8 @@ export function kepMegjelenites(){
         az alapfogalmak és a haladó témák elsajátításában.
         Gyakorolj PHP, JavaScript és Java nyelveken,
         és építs stabil programozói tudást!</p>
-        </div>`;
+        </div>
+        <div id="fejlesztes"><p>Fejlesztés alatt!</p></div>`;
     });
 
     tanulo_kartyaElem.addEventListener("mouseleave", () => {
