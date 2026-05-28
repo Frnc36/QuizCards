@@ -1,5 +1,5 @@
-
 export default class Valasz {
+  /* Adattagok */
   #szoveg;
   #helyes;
 
@@ -9,11 +9,12 @@ export default class Valasz {
     this.onClick = onClick;
   }
 
+  /* Getterek */
   getSzoveg() {
     return this.#szoveg;
   }
 
-  isHelyesE() {
+  ishelyesE() {
     return this.#helyes;
   }
 
@@ -21,6 +22,7 @@ export default class Valasz {
     const p = document.createElement("p");
     p.textContent = this.#szoveg;
 
+   
     
     p.addEventListener("click", () => { 
       const osszes = szuloElem.querySelectorAll("p");
@@ -43,4 +45,4 @@ export default class Valasz {
 
     szuloElem.appendChild(p);
   }
-}
+  }
