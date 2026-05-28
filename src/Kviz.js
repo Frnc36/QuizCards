@@ -125,8 +125,13 @@ export default class Kviz {
   }
 
   valaszKattintva(valasz) {
-      this.#aktualisIndex++;
-      this.#ujKerdes();
+    this.valaszEllenorzese(valasz);
+
+      setTimeout(() => {
+        this.#aktualisIndex++;
+        this.#ujKerdes();
+      }, 100);
+
 
   }
   vegeVanE() {

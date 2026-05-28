@@ -220,6 +220,11 @@ nav{
   user-select: none;
 }
 
+h3{
+  padding: 15px;
+  text-align: center;
+}
+
 .modal {
   position: fixed;
   top: 0;
