@@ -219,3 +219,68 @@ nav{
 .reset-gomb {
   user-select: none;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  min-width: 280px;
+}
+
+.modal-gombok {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modal-content button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#igen {
+  background: #22c55e;
+  color: white;
+}
+
+#nem {
+  background: #ef4444;
+  color: white;
+}
+
+#igen:hover {
+  background: #16a34a; 
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+#nem:hover {
+  background: #dc2626; 
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+}

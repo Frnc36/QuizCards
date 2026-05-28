@@ -33,7 +33,25 @@ export default class Kviz {
       const resetGomb = document.createElement("button");
       resetGomb.textContent = "Újraindítás";
       resetGomb.classList.add("reset-gomb");
-      resetGomb.addEventListener("click", () => this.reset());
+      
+      
+      resetGomb.addEventListener("click", () => {
+        const modal = document.getElementById("modal");
+        const igen = document.getElementById("igen");
+        const nem = document.getElementById("nem");
+
+        modal.classList.remove("hidden");
+
+        igen.onclick = () => {
+          modal.classList.add("hidden");
+          this.reset();
+        };
+
+        nem.onclick = () => {
+          modal.classList.add("hidden");
+        };
+      });
+
       this.szuloElem.appendChild(resetGomb);
 
       return;
@@ -55,7 +73,24 @@ export default class Kviz {
     const resetGomb = document.createElement("button");
     resetGomb.textContent = "Újraindítás";
     resetGomb.classList.add("reset-gomb");
-    resetGomb.addEventListener("click", () => this.reset());
+    
+    resetGomb.addEventListener("click", () => {
+      const modal = document.getElementById("modal");
+      const igen = document.getElementById("igen");
+      const nem = document.getElementById("nem");
+
+      modal.classList.remove("hidden");
+
+      igen.onclick = () => {
+        modal.classList.add("hidden");
+        this.reset();
+      };
+
+      nem.onclick = () => {
+        modal.classList.add("hidden");
+      };
+    });
+
     this.szuloElem.appendChild(resetGomb);
   }
 
@@ -90,9 +125,6 @@ export default class Kviz {
   }
 
   valaszKattintva(valasz) {
-    if (this.aktualisKerdesObj.helyesValaszE(valasz)) {
-      this.#pontszam++;
-    }
       this.#aktualisIndex++;
       this.#ujKerdes();
 
