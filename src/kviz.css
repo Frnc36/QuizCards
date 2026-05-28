@@ -214,3 +214,8 @@ nav{
   color: white;
   border: none !important;
 }
+
+.valaszok p,
+.reset-gomb {
+  user-select: none;
+}

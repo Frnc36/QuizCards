@@ -93,12 +93,8 @@ export default class Kviz {
     if (this.aktualisKerdesObj.helyesValaszE(valasz)) {
       this.#pontszam++;
     }
-    
-    
-    setTimeout(() => {
       this.#aktualisIndex++;
       this.#ujKerdes();
-    }, 1000);
 
   }
   vegeVanE() {

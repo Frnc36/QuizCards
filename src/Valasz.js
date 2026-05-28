@@ -29,6 +29,12 @@ export default class Valasz {
       osszes.forEach(elem => {
         elem.style.pointerEvents = "none";
       });
+      
+      const resetGomb = document.querySelector(".reset-gomb");
+      if (resetGomb) {
+        resetGomb.style.pointerEvents = "none";
+        resetGomb.style.opacity = "0.5";
+      }
 
       const helyes = this.ishelyesE();
       if (helyes) {
