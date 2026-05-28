@@ -1,5 +1,5 @@
+
 export default class Valasz {
-  /* Adattagok */
   #szoveg;
   #helyes;
 
@@ -9,12 +9,11 @@ export default class Valasz {
     this.onClick = onClick;
   }
 
-  /* Getterek */
   getSzoveg() {
     return this.#szoveg;
   }
 
-  ishelyesE() {
+  isHelyesE() {
     return this.#helyes;
   }
 
@@ -22,7 +21,21 @@ export default class Valasz {
     const p = document.createElement("p");
     p.textContent = this.#szoveg;
 
+    // fontos a CSS-ed miatt
+    p.classList.add("valasz");
+
     p.addEventListener("click", () => {
+      // színezés
+      if (this.#helyes) {
+        p.classList.add("helyes");
+      } else {
+        p.classList.add("helytelen");
+      }
+
+      // ne lehessen újra kattintani
+      p.style.pointerEvents = "none";
+
+      // jelez a Kvíznek
       this.onClick(this);
     });
 

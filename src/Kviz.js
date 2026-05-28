@@ -1,3 +1,4 @@
+
 import Kerdes from "./Kerdes.js";
 
 export default class Kviz {
@@ -10,8 +11,8 @@ export default class Kviz {
     this.#aktualisIndex = 0;
     this.#pontszam = 0;
     this.szuloElem = szuloElem;
-    this.#kever(this.#kerdesek);
 
+    this.#kever(this.#kerdesek);
     this.#ujKerdes();
   }
 
@@ -26,16 +27,13 @@ export default class Kviz {
     this.szuloElem.innerHTML = "";
 
     if (this.vegeVanE()) {
-      const eredmeny = document.createElement("h3");
-      eredmeny.textContent = `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
-      this.szuloElem.appendChild(eredmeny);
+      this.eredmenyKiir();
 
       const resetGomb = document.createElement("button");
       resetGomb.textContent = "Újraindítás";
       resetGomb.classList.add("reset-gomb");
       resetGomb.addEventListener("click", () => this.reset());
       this.szuloElem.appendChild(resetGomb);
-
       return;
     }
 
@@ -49,7 +47,7 @@ export default class Kviz {
       adat.kerdesSzoveg,
       adat.valaszok,
       this.szuloElem,
-      this,
+      this
     );
 
     const resetGomb = document.createElement("button");
@@ -66,33 +64,25 @@ export default class Kviz {
     this.#ujKerdes();
   }
 
-  /* Getter */
-  getPontszam() {
-    return this.#pontszam;
+  /* ===== PONTSZÁM ===== */
+
+  novelPontszam() {
+    this.#pontszam++;
   }
 
-  getKerdesekSzama() {
-    return this.#kerdesek.length;
-  }
-  getAktualisKerdes() {
-    return this.#kerdesek[this.#aktualisIndex];
+  eredmenyKiir() {
+    const eredmeny = document.createElement("h3");
+    eredmeny.textContent = `Eredmény: ${this.#pontszam} / ${this.#kerdesek.length}`;
+    this.szuloElem.appendChild(eredmeny);
   }
 
-  /* Saját */
-  valaszEllenorzese(valasz) {
-    const helyes = this.aktualisKerdesObj.helyesValaszE(valasz);
-
-    if (helyes) {
-      this.#pontszam++;
-    }
-
-    return helyes;
-  }
+  /* ===== VEZÉRLÉS ===== */
 
   valaszKattintva(valasz) {
-    if (this.aktualisKerdesObj.helyesValaszE(valasz)) {
-      this.#pontszam++;
+    if (valasz.isHelyesE()) {
+      this.novelPontszam();
     }
+
     this.#aktualisIndex++;
     this.#ujKerdes();
   }
