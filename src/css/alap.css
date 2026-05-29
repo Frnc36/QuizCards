@@ -11,12 +11,12 @@ body {
     monospace;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 75px auto 50px;
+  grid-template-rows: 200px auto 50px;
   grid-template-areas:
     "h"
-    "n"
     "m"
     "f";
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #0d2044;
@@ -24,16 +24,14 @@ body {
 
 header {
   grid-area: h;
-  background-image: url(Logok/QuizCards.png);
+  background-image: url(../Logok/QuizCards.png);
   background-color: #0d121b;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-nav{
-  grid-area: n;
-}
+
 
 main {
   grid-area: m;

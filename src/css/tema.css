@@ -93,17 +93,17 @@ article:hover .kartya_szoveg {
 
 #php {
     grid-area: php;
-    background-image: url("Kepek/php.png");
+    background-image: url(../Kepek/php.png);
 }
 
 #js {
     grid-area: js;
-    background-image: url("Kepek/js.png");
+    background-image: url(../Kepek/js.png);
 }
 
 #java {
     grid-area: java;
-    background-image: url("Kepek/java.png");
+    background-image: url(../Kepek/java.png);
 }
 
 #php, #js, #java {
