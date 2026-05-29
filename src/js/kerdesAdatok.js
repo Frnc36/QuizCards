@@ -190,8 +190,6 @@ export const kvizAdatok = [
         { szoveg: "HTML", helyes: false },
         { szoveg: "Java", helyes: false },
       ]},
-
-      // +10
       { kerdesSzoveg: "Mi a $_POST?", valaszok: [
         { szoveg: "Adat küldés", helyes: true },
         { szoveg: "Adat törlés", helyes: false },
@@ -318,8 +316,6 @@ export const kvizAdatok = [
         { szoveg: "Kiír", helyes: false },
         { szoveg: "Ciklus", helyes: false },
       ]},
-
-      // +10
       { kerdesSzoveg: "Mi az extends?", valaszok: [
         { szoveg: "Öröklődés", helyes: true },
         { szoveg: "Ciklus", helyes: false },
