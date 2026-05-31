@@ -31,8 +31,6 @@ header {
   background-size: contain;
 }
 
-
-
 main {
   grid-area: m;
   display: grid;
@@ -45,7 +43,7 @@ footer {
   height: 70px;
   padding: 20px;
   width: fit-content;
-  margin: 5px auto;
+  margin: -30px auto;
   border: 1px solid rgba(59, 130, 246, 0.3);
   border-radius: 1.8rem;
   background-color: rgba(18, 25, 45, 0.85);
