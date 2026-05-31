@@ -1,0 +1,123 @@
+// ============================================================
+// MIT LEHET TESZTELNI? - TESZTLEFEDÉSI LISTA
+// ============================================================
+
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    QUIZCARDS - TESZTELHETŐ FUNKCIÓK LISTÁJA                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  📌 OLDALAK ELÉRHETŐSÉGE                                                    │
+│  ├── Főoldal (index.html) betöltődése                                       │
+│  ├── Témaválasztó (kvizTema.html) betöltődése                               │
+│  ├── Kvíz oldal (kviz.html) betöltődése                                     │
+│  └── 404 hibakezelés (nem létező oldalak)                                   │
+│                                                                             │
+│  📌 FŐOLDAL FUNKCIÓI                                                        │
+│  ├── Tanulókártya hover effekt (mouseenter/mouseleave)                      │
+│  │   ├── Szöveg megjelenése                                                 │
+│  │   └── "Fejlesztés alatt!" felirat                                        │
+│  ├── Kvíz kártya hover effekt                                               │
+│  │   ├── Szöveg megjelenése                                                 │
+│  │   └── Link a témaválasztóra                                              │
+│  └── Footer láthatósága és tartalma                                         │
+│                                                                             │
+│  📌 TÉMAVÁLASZTÓ FUNKCIÓI                                                   │
+│  ├── 3 kártya megjelenése (PHP, JS, Java)                                   │
+│  ├── Kártyák hover effektje (CSS opacity változás)                          │
+│  ├── Kártyákra kattintás                                                    │
+│  │   ├── localStorage mentés (téma kiválasztása)                            │
+│  │   └── Átirányítás kvíz oldalra                                           │
+│  └── Reszponzív megjelenés (mobil, tablet, desktop)                         │
+│                                                                             │
+│  📌 KVIZ OLDAL ALAP MŰKÖDÉSEI                                               │
+│  ├── Kérdés megjelenítése (.kerdes h2)                                      │
+│  ├── Válaszlehetőségek megjelenítése (.valaszok p)                          │
+│  ├── Kérdés számláló (.melyik)                                              │
+│  ├── Reset gomb (.reset-gomb)                                               │
+│  └── Téma függő kérdések (PHP/JS/Java specifikus tartalom)                  │
+│                                                                             │
+│  📌 VÁLASZADÁSI MECHANIZMUS                                                 │
+│  ├── Válaszra kattintás                                                    │
+│  ├── Automatikus léptetés következő kérdésre                                 │
+│  ├── Helyes válasz vizuális jelzése (zöld: .helyes osztály)                  │
+│  ├── Rossz válasz vizuális jelzése (piros: .rossz osztály)                   │
+│  ├── Válasz után a többi válasz letiltása (pointer-events: none)            │
+│  ├── Reset gomb letiltása válasz után                                        │
+│  └── Pontszám számolás                                                      │
+│                                                                             │
+│  📌 KVIZ VÉGE ÉS EREDMÉNY                                                   │
+│  ├── Utolsó kérdés után eredmény megjelenése                                 │
+│  ├── Eredmény szöveg (pl. "Eredmény: X / Y")                                │
+│  └── Újraindítás gomb megjelenése                                           │
+│                                                                             │
+│  📌 RESET GOMB ÉS MODAL                                                     │
+│  ├── Reset gomb kattinthatósága                                             │
+│  ├── Modal ablak megjelenése                                                │
+│  ├── Modal tartalom ellenőrzése ("Biztosan újra akarod indítani?")          │
+│  ├── "Mégse" gomb működése (modal bezár)                                    │
+│  ├── "Igen" gomb működése (kvíz újraindítás)                                │
+│  └── Újraindítás után az első kérdésnél indul a kvíz                        │
+│                                                                             │
+│  📌 LOCALSTORAGE KEZELÉS                                                    │
+│  ├── PHP kiválasztásakor localStorage.setItem('tema', 'PHP')                │
+│  ├── JS kiválasztásakor localStorage.setItem('tema', 'JavaScript')          │
+│  └── Java kiválasztásakor localStorage.setItem('tema', 'Java')              │
+│                                                                             │
+│  📌 NAVIGÁCIÓ                                                               │
+│  ├── Header kép linkje visszavisz a főoldalra                               │
+│  ├── Témaválasztó → Kvíz oldal                                              │
+│  └── Visszanavigálás böngésző gombokkal (history)                           │
+│                                                                             │
+│  📌 RESZPONZIVITÁS (CSS MEDIA QUERIES)                                      │
+│  ├── Mobil nézet (max 600px) - válaszok egymás alatt                        │
+│  ├── Táblagép nézet (max 800px) - kártyák egymás alatt                      │
+│  └── Asztali nézet (1200px+) - minden elem rácsban                          │
+│                                                                             │
+│  📌 HIBAKEZELÉS                                                             │
+│  ├── Nincs kiválasztott téma a localStorage-ban                              │
+│  ├── Hibás téma név a localStorage-ban                                       │
+│  └── API hiba (ha API-ról töltődnek az adatok)                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+*/
+
+// ============================================================
+// MEGJEGYZÉSEK A TOVÁBBI TESZTELHETŐ FUNKCIÓKHOZ
+// ============================================================
+
+/*
+📝 HIÁNYZÓ TESZTEK (AMIKET ÉRDEMES MEGÍRNI):
+
+1. localStorage tesztek:
+   - PHP kiválasztás → localStorage 'tema' = 'PHP'
+   - JavaScript kiválasztás → localStorage 'tema' = 'JavaScript'  
+   - Java kiválasztás → localStorage 'tema' = 'Java'
+   - Nincs téma esetén hibaüzenet
+
+2. Helyes/rossz válasz színezés:
+   - Helyes válasz → 'helyes' CSS osztály
+   - Rossz válasz → 'rossz' CSS osztály
+
+3. Válasz után letiltás:
+   - pointer-events: none a válaszokon
+   - reset gomb letiltása (opacity + pointer-events)
+
+4. Modal működés:
+   - Reset gomb megnyitja a modalt
+   - 'Igen' gomb újraindít
+   - 'Mégse' gomb bezár
+
+5. Kvíz vége:
+   - Eredmény kiírása (pl. "Eredmény: 15 / 20")
+   - Újraindítás gomb
+
+6. Reszponzivitás:
+   - 375px: válaszok egymás alatt
+   - 768px: kártyák egymás alatt
+   - 1200px: minden normál nézetben
+
+7. Hibakezelés:
+   - Üres localStorage 'tema' esetén hibaüzenet
+   - Nem létező téma esetén 'Nincs ilyen téma!' üzenet
+*/
