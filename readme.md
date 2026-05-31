@@ -53,23 +53,23 @@ A projekt során fontos szempont az objektum-orientált felépítés, a tiszta f
 
 ### Főmenü
 
-<img width="662" height="462" alt="Fomenu" src="https://github.com/user-attachments/assets/1a005ff9-28ee-44e4-819d-bfaa68bfc26b" />
+![Főmenü oldal](src/drotvazak/Fomenu.png)
 
 ### Témaválasztó
 
-![Főmenü utáni oldal](Draw.io_drotvazak/Temavalaszto.png)
+![Téma választó oldal](src/drotvazak/tanulokarytakTemaValsztas.png)
 
 ### Tanulókártya
 
-![Tanulókártya drótváza](Draw.io_drotvazak/TanuloKartya.png)
+![Tanulókártya drótváza](src/drotvazak/TanuloKaryta.png)
 
 ### Kvíz
 
-![Kvíz drótváza](Draw.io_drotvazak/Kviz.png)
+![Kvíz drótváza](src/drotvazak/Kivz.png)
 
 ## UML ábra
 
-![UML ábra](UML/UML_abra.png)
+![UML ábra](src/UML/UML_abra.png)
 
 ## Feladat kiszotás
 
