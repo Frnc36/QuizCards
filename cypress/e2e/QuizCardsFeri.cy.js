@@ -103,8 +103,8 @@ describe("QuizCards Teszt", () => {
       cy.get(".kerdes h2").should("be.visible");
     });
 
-    it("3.2 - Válaszlehetőségek megjelennek (minimum 2 db)", () => {
-      cy.get(".valaszok p").should("have.length.at.least", 2);
+    it("3.2 - Válaszlehetőségek megjelennek", () => {
+      cy.get(".valaszok p").should("have.length.at.least", 4);
     });
 
     it("3.3 - Kérdés számláló látszik", () => {
