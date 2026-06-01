@@ -1,14 +1,34 @@
-export function kepMegjelenites(){
-    let tanulo_kartyaElem = document.querySelector("#tanulo_kartya");
-    let kvizElem = document.querySelector("#kviz");
+/**
+ * @function kepMegjelenites
+ * @description A főmenü elemek (tanulókártyák és kvíz) megjelenítéséért
+ * és az ezekhez tartozó események kezeléséért felel.
+ */
+export function kepMegjelenites() {
+  /**
+   * @type {HTMLElement}
+   * @description A tanulókártya menüpont DOM eleme.
+   */
+  let tanulo_kartyaElem = document.querySelector("#tanulo_kartya");
 
-    tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+  /**
+   * @type {HTMLElement}
+   * @description A kvíz menüpont DOM eleme.
+   */
+  let kvizElem = document.querySelector("#kviz");
 
-    kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
+  /**
+   * @description Alapértelmezett szöveg megjelenítése.
+   */
+  tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+  kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
 
-    //tanulókártya
-    tanulo_kartyaElem.addEventListener("mouseenter", () => {
-        tanulo_kartyaElem.innerHTML = `<div class="kartya_szoveg">
+  //tanulókártya
+  /**
+   * @event mouseenter
+   * @description Tanulókártya elem fölé húzásakor információ megjelenítése.
+   */
+  tanulo_kartyaElem.addEventListener("mouseenter", () => {
+    tanulo_kartyaElem.innerHTML = `<div class="kartya_szoveg">
         <h1>Tanulókártyák</h1>
         <p>Tanulj gyorsan és rendszerezetten!<br>
         Interaktív kártyák segítenek
@@ -16,15 +36,23 @@ export function kepMegjelenites(){
         Gyakorolj PHP, JavaScript és Java nyelveken,
         és építs stabil programozói tudást!</p>
         <div id="fejlesztes"><p>Fejlesztés alatt!</p></div></div>`;
-    });
+  });
 
-    tanulo_kartyaElem.addEventListener("mouseleave", () => {
-        tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
-    });
+  /**
+   * @event mouseleave
+   * @description Tanulókártya elem elhagyásakor alapállapot visszaállítása.
+   */
+  tanulo_kartyaElem.addEventListener("mouseleave", () => {
+    tanulo_kartyaElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/tanulokartyak.png" alt="tanulokartyak">`;
+  });
 
-    //kvíz
-    kvizElem.addEventListener("mouseenter", () => {
-        kvizElem.innerHTML = `<a href="kvizTema.html">
+  //kvíz
+  /**
+   * @event mouseenter
+   * @description Kvíz elem fölé húzásakor részletes leírás megjelenítése.
+   */
+  kvizElem.addEventListener("mouseenter", () => {
+    kvizElem.innerHTML = `<a href="kvizTema.html">
         <div class="kartya_szoveg">
         <h1>Kvíz</h1>
         <p>Teszteld a tudásod kérdéseken keresztül!<br>
@@ -33,10 +61,13 @@ export function kepMegjelenites(){
         A rendszer színnel jelzi,
         hogy jó vagy hibás választ adtál.
         </div></a>`;
-    });
+  });
 
-    kvizElem.addEventListener("mouseleave", () => {
-        kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
-    });
-
+  /**
+   * @event mouseleave
+   * @description Kvíz elem elhagyásakor alapállapot visszaállítása.
+   */
+  kvizElem.addEventListener("mouseleave", () => {
+    kvizElem.innerHTML = `<img class="fomenu_kepek" src="src/Kepek/kviz.png" alt="kviz">`;
+  });
 }

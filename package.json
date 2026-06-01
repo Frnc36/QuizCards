@@ -1,8 +1,12 @@
 {
   "devDependencies": {
-    "cypress": "^15.16.0"
+    "cypress": "^15.16.0",
+    "docdash": "^2.0.2",
+    "jsdoc": "^4.0.5"
   },
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json"
   }
 }
