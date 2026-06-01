@@ -1,8 +1,5 @@
 const OLDAL = "https://frnc36.github.io/QuizCards/kvizTema.html";
 
-// ============================================================
-// SEGÉDFÜGGVÉNYEK
-// ============================================================
 
 /**
  * Kvíz oldalra navigál az első (PHP) témára kattintva
@@ -18,12 +15,10 @@ function navigalKvizOldalra() {
 // ============================================================
 
 describe("QuizCards Teszt", () => {
-
   // ==========================================================
   // 1. CSOPORT: OLDAL ELÉRHETŐSÉGI TESZTEK
   // ==========================================================
   describe("1. Oldal elérhetőségi tesztek", () => {
-    
     it("1.1 - Témaválasztó oldal létezik és betöltődik", () => {
       cy.visit(OLDAL);
       cy.get("body").should("exist");
@@ -63,7 +58,6 @@ describe("QuizCards Teszt", () => {
   // 2. CSOPORT: TÉMAVÁLASZTÓ KÁRTYÁK TESZTEK
   // ==========================================================
   describe("2. Témaválasztó kártyák tesztek", () => {
-    
     beforeEach(() => {
       cy.visit(OLDAL);
     });
@@ -94,7 +88,6 @@ describe("QuizCards Teszt", () => {
   // 3. CSOPORT: KVIZ OLDAL ALAP MŰKÖDÉSEI
   // ==========================================================
   describe("3. Kvíz oldal alap működései", () => {
-    
     beforeEach(() => {
       navigalKvizOldalra();
     });
@@ -125,17 +118,18 @@ describe("QuizCards Teszt", () => {
   // 4. CSOPORT: VÁLASZADÁSI MECHANIZMUS TESZTEK
   // ==========================================================
   describe("4. Válaszadási mechanizmus tesztek", () => {
-    
     beforeEach(() => {
       navigalKvizOldalra();
     });
 
     it("4.1 - Válaszra kattintva a következő kérdésre ugrik", () => {
-      cy.get(".melyik").invoke("text").then((elsoSzamlalo) => {
-        cy.get(".valaszok p").first().click();
-        cy.wait(1200);
-        cy.get(".melyik").invoke("text").should("not.eq", elsoSzamlalo);
-      });
+      cy.get(".melyik")
+        .invoke("text")
+        .then((elsoSzamlalo) => {
+          cy.get(".valaszok p").first().click();
+          cy.wait(1200);
+          cy.get(".melyik").invoke("text").should("not.eq", elsoSzamlalo);
+        });
     });
 
     it("4.2 - Válaszra kattintva a kérdés szövege megváltozik", () => {
@@ -154,7 +148,6 @@ describe("QuizCards Teszt", () => {
   // 5. CSOPORT: KÉPEK ÉS VIZUÁLIS ELEMEK TESZTEK
   // ==========================================================
   describe("5. Képek és vizuális elemek tesztek", () => {
-    
     it("5.1 - Minden kép betölt a főoldalon", () => {
       cy.visit("/");
       cy.get("img").each(($img) => {
@@ -170,10 +163,9 @@ describe("QuizCards Teszt", () => {
     it("5.3 - Footer minden oldalon megjelenik", () => {
       cy.visit(OLDAL);
       cy.get("footer").should("be.visible");
-      
+
       navigalKvizOldalra();
       cy.get("footer").should("be.visible");
     });
   });
 });
-
